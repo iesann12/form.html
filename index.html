@@ -31,7 +31,7 @@
             box-sizing: border-box;
         }
         .custom-button {
-            background-color: #4CAF50; /* Green color */
+            background-color: #4CAF50; 
             color: white;
             padding: 10px 20px;
             border: none;
@@ -39,10 +39,11 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s;
+            width: 50px;
         }
         .custom-button:hover {
             background-color: #45a049;
-            transform: scale(1.1); /* Darker green on hover */
+            transform: scale(1.1); 
         }
         .form-group > label {
     display: block;
@@ -68,7 +69,7 @@
     </div>
 
     <h1>Admission Form</h1>
-    <form id="myForm" action="https://iesann12.github.io/ty.html/" method="get">
+    <form id="myForm">
         <div class="form-group">
             <label for="name">Name of student:</label>
             <input type="text" id="name" name="name" required>
@@ -104,7 +105,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="6" ></textarea>
         </div>
-        <button type="submit" class="custom-button">Submit</button>
+        <a href="https://iesann12.github.io/ty.html/"><div class="custom-button">Submit</div></a>
     </form>
 
     </body>
