@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Green Button</title>
+    <style>
+   body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+    
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .custom-button {
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .custom-button:hover {
+            background-color: #45a049;
+            transform: scale(1.1); /* Darker green on hover */
+        }
+        .form-group > label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.gender-group label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <img src="https://scontent.fktm6-1.fna.fbcdn.net/v/t39.30808-6/311596443_5900896169928861_4634910454002947648_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=pn5lYcXzR7YQ7kNvwGFUXpO&_nc_oc=AdmmS6cFTs-0qYfAGOIGlSM4JsQfZKiSFmq6b19PT7KxhS5mjnnE_kbdRo_IF04JAiQ&_nc_zt=23&_nc_ht=scontent.fktm6-1.fna&_nc_gid=MrJvaCcfAfDCOwLnBaujqQ&oh=00_AfHept4f7N-DIdo0ROK3o_PYXiPCzH4wzPPN9L5JusYuig&oe=67FD7068"/> 
+    </div>
+
+    <h1>Admission Form</h1>
+    <form id="myForm">
+        <div class="form-group">
+            <label for="name">Name of student:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+    <div class="form-group gender-group">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="Fname">Name of Father:</label>
+            <input type="text" id="Fname" name="Fname" required>
+        </div>
+        <div class="form-group">
+            <label for="Mname">Name of Mother:</label>
+            <input type="text" id="Mname" name="Mname" required>
+        </div>
+        <div class="form-group">
+            <label for="add">Address:</label>
+            <input type="text" id="add" name="add" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="custom-button">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                gender: document.querySelector('input[name="gender"]:checked')?.value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                Fname: document.getElementById('Fname').value,
+                Mname: document.getElementById('Mname').value,
+                address: document.getElementById('add').value,
+                message: document.getElementById('message').value
+            };
+</html>
